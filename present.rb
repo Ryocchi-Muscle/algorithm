@@ -9,16 +9,6 @@
 # ・1 ≦ N ≦ 1,000  1 ≦ X, Y ≦ N
 
 
-
-
-# # 標準入力からの値取得方法
-input_line = gets.to_i
-input_line.times do
-  s = gets.chomp.split(" ")
-  print "hello = #{ s[0] } , world = #{ s[1] }\n"
-end
-
-
 # 標準入力からの値取得
 input_line = gets.chomp
 n, x, y = input_line.split.map(&:to_i)
