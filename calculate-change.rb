@@ -5,3 +5,8 @@ m = gets.to_i
 change = m - n
 
 puts change
+
+
+print "Please enter something: "
+input_line = gets
+puts "You entered: #{input_line}"
