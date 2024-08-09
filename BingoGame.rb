@@ -43,9 +43,11 @@ n.times do |j|
 end
 
 # 対角線をチェック
+# 左上から右下への対角線をチェック
 if n.times.map { |i| open[i][i] }.all?
   bingo_count += 1
 end
+# 右上から左下への対角線をチェック
 if n.times.map { |i| open[i][n-i-1] }.all?
   bingo_count += 1
 end
