@@ -1,7 +1,7 @@
 # ビンゴカードの縦横の大きさを表す整数 3 ≦ N ≦ 21
 # 抽選回数を表す整数 K
 
-# 1.入力の処理
+# 入力の処理
 n, k = gets.chomp.split.map(&:to_i)
 bingo_card = []
 n.times do
@@ -9,7 +9,7 @@ n.times do
 end
 draw_numbers = gets.chomp.split.map(&:to_i)
 
-# 2.ビンゴカードのマスを開ける処理
+# ビンゴカードのマスを開ける処理
 open = Array.new(n) { Array.new(n, false)}
 
 # 最初から開けることができる中央のマス(0)を開ける
@@ -28,7 +28,7 @@ draw_numbers.each do |number|
   end
 end
 
-# ステップ3: ビンゴの判定
+# ビンゴの判定
 bingo_count = 0
 
 # 行をチェック
@@ -52,5 +52,5 @@ if n.times.map { |i| open[i][n-1-i] }.all?
   bingo_count += 1
 end
 
-# ステップ4: 結果の出力
+
 puts bingo_count
