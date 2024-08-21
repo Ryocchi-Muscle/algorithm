@@ -27,8 +27,7 @@ end
 
 # 結果の出力
 if  top_10_count == 10
-  p "Yes"
+  puts "Yes"
 else
-  p top_10_count
+  puts top_10_count
 end
-
