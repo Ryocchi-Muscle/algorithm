@@ -9,7 +9,7 @@ n, m = gets.split.map(&:to_i)
 distance = []
 
 # 車間距離を配列に格納する処理
-distance = (n -1).times.map do
+distance = (n-1).times.map do
   gets.to_i
 end
 
