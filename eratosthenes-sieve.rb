@@ -1,18 +1,14 @@
-
-
-# 配列用意
-array = []
-def eratosthenes(num)
-   num.each do |i|
-  if i % 2 == 0 && i / 2 != 1
-    array << i
-  elsif i % 3 == 0 && i / 3 != 1
-    array << i
-  elsif i % 7 == 0 && i / 7 != 1
-     array << i
-  
-  end
+def eratosthenes(n)
+  # 素数候補を用意
+  prime_number = (2..n).to_a
+  # 素数候補の振るい落とし
+  prime_number.each do |p|
+    break if p * p > n
+    # pの倍数を削除
+     prime_number.reject! { |num| num > p &&  num % p == 0}
+    end
+    # 素数リストを『,』で区切って表示
+    puts prime_number.join(",")
 end
 
-num = gets.split.map(&:to_i)
-eratosthenes(num)
+eratosthenes(50)
